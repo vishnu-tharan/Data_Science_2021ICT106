@@ -23,6 +23,11 @@ Both methods rank marital-status, capital-gain, and education-num highest. Censu
 
 Education and education-num are also shuffled together. Their joint score drop is close to education-num alone in this fitted forest. These checks describe model behaviour and do not prove cause.
 
+## Random feature experiment
+A separate experiment adds a random number and a random category to a copy of the training inputs. It uses a group split for fitting and validation and keeps the final test set out of the experiment. Two forests use minimum leaf sizes of 1 and 15.
+
+The unrestricted forest gives the random number built-in importance of 0.1053. Its validation permutation drop is -0.0080. This shows that importance from training splits may not carry over to new rows. Both experiment settings, both controls, and fitting/validation results are saved with the chart.
+
 ## Run
 Use Python 3.13. From the project folder:
 
