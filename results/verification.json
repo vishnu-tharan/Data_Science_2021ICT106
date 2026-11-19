@@ -1,0 +1,138 @@
+{
+  "review_date": "2026-11-19",
+  "student": "B.Vishnutharan",
+  "registration": "2021/ICT/106",
+  "checks": [
+    {
+      "check": "Notebook fully executed",
+      "status": "pass",
+      "evidence": "14 executed code cells; no error outputs"
+    },
+    {
+      "check": "Saved chart outputs",
+      "status": "pass",
+      "evidence": "Four embedded chart outputs and four exported PNG files"
+    },
+    {
+      "check": "Source file identity",
+      "status": "pass",
+      "evidence": "SHA-256 checksums match all three original UCI files"
+    },
+    {
+      "check": "Cleaned row counts",
+      "status": "pass",
+      "evidence": "32,537 training rows and 16,250 test rows"
+    },
+    {
+      "check": "No exact duplicates",
+      "status": "pass",
+      "evidence": "Checked both cleaned CSV files"
+    },
+    {
+      "check": "No test input profiles in training",
+      "status": "pass",
+      "evidence": "Hashed all 14 original input values, excluding row index"
+    },
+    {
+      "check": "Five folds for every model",
+      "status": "pass",
+      "evidence": "Five models, five saved fold scores each"
+    },
+    {
+      "check": "CV roc_auc summary matches folds",
+      "status": "pass",
+      "evidence": "Recomputed mean and sample standard deviation from saved fold scores"
+    },
+    {
+      "check": "CV balanced_accuracy summary matches folds",
+      "status": "pass",
+      "evidence": "Recomputed mean and sample standard deviation from saved fold scores"
+    },
+    {
+      "check": "CV f1 summary matches folds",
+      "status": "pass",
+      "evidence": "Recomputed mean and sample standard deviation from saved fold scores"
+    },
+    {
+      "check": "CV accuracy summary matches folds",
+      "status": "pass",
+      "evidence": "Recomputed mean and sample standard deviation from saved fold scores"
+    },
+    {
+      "check": "Model selection follows stated rule",
+      "status": "pass",
+      "evidence": "Highest training CV mean ROC-AUC among the three forest settings"
+    },
+    {
+      "check": "Predictions cover complete cleaned test set",
+      "status": "pass",
+      "evidence": "One prediction per cleaned test row"
+    },
+    {
+      "check": "Targets match cleaned data",
+      "status": "pass",
+      "evidence": "Compared target labels in row order"
+    },
+    {
+      "check": "Fixed threshold is applied",
+      "status": "pass",
+      "evidence": "Threshold 0.5"
+    },
+    {
+      "check": "Test metrics match saved predictions",
+      "status": "pass",
+      "evidence": "Recomputed all seven forest test metrics"
+    },
+    {
+      "check": "Forest beats simple baseline",
+      "status": "pass",
+      "evidence": "86.25% forest accuracy vs 76.37% majority accuracy"
+    },
+    {
+      "check": "Importance covers every original input",
+      "status": "pass",
+      "evidence": "All 14 input groups, built-in importance sums to one"
+    },
+    {
+      "check": "Permutation summary matches ten saved shuffles",
+      "status": "pass",
+      "evidence": "Means and population SD across ten shuffles match the comparison table"
+    },
+    {
+      "check": "Ten genuine wrong predictions",
+      "status": "pass",
+      "evidence": "Five false positives and five false negatives, all with written reviews"
+    },
+    {
+      "check": "Error selection follows stated rule",
+      "status": "pass",
+      "evidence": "Most confident five errors of each type, including deterministic tie order"
+    },
+    {
+      "check": "Individual error context matches training records",
+      "status": "pass",
+      "evidence": "Recomputed matching education, marriage status and occupation counts and income shares for all ten cases"
+    },
+    {
+      "check": "Controlled random experiment evidence",
+      "status": "pass",
+      "evidence": "Both random controls, both forest settings, fitting and validation results"
+    },
+    {
+      "check": "Presentation evidence",
+      "status": "pass",
+      "evidence": "Ten slides with embedded speaker notes; prior package and layout checks passed"
+    },
+    {
+      "check": "Evidence is included for Git",
+      "status": "pass",
+      "evidence": "Results, charts, cleaned data and PDF are not excluded"
+    }
+  ],
+  "local_checks_passed": 25,
+  "pending_requirements": [
+    "GitHub publication and repository submission",
+    "Personal preparation and viva"
+  ],
+  "scope": "Checks of this notebook run and saved evidence. This is not a grade prediction or a claim that the viva or publication is complete."
+}
