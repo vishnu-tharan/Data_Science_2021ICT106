@@ -28,6 +28,11 @@ A separate experiment adds a random number and a random category to a copy of th
 
 The unrestricted forest gives the random number built-in importance of 0.1053. Its validation permutation drop is -0.0080. This shows that importance from training splits may not carry over to new rows. Both experiment settings, both controls, and fitting/validation results are saved with the chart.
 
+## Error analysis and reproducibility
+The forest makes 2,234 wrong test predictions. Five confident false positives and five confident false negatives are reviewed using a fixed selection rule. Each review reports matching training-profile counts, their income rates, and missing-input counts. These comparisons add context but do not prove the cause of a decision. All test predictions and age-band error rates are saved.
+
+The notebook includes the findings, limits, references, seed, and package versions. The seed is 106. Source hashes, data checks, fold scores, shuffle repeats, final metrics, predictions, and the summary are included as evidence.
+
 ## Run
 Use Python 3.13. From the project folder:
 

@@ -1,0 +1,85 @@
+{
+  "student": "B.Vishnutharan",
+  "registration": "2021/ICT/106",
+  "seed": 106,
+  "audit": {
+    "raw_train_rows": 32561,
+    "raw_test_rows": 16281,
+    "train_exact_duplicates_removed": 24,
+    "test_exact_duplicates_removed": 5,
+    "overlapping_test_profiles_removed": 26,
+    "clean_train_rows": 32537,
+    "clean_test_rows": 16250
+  },
+  "selected_model": "Random Forest leaf 15",
+  "test_metrics": [
+    {
+      "model": "Majority baseline",
+      "accuracy": 0.7636923076923077,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.2363076923076923
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.8505846153846154,
+      "balanced_accuracy": 0.7595653286999732,
+      "precision": 0.7280361757105943,
+      "recall": 0.5869791666666667,
+      "f1": 0.6499423298731257,
+      "roc_auc": 0.9038434331352402,
+      "average_precision": 0.7593546453164818
+    },
+    {
+      "model": "Random Forest leaf 15",
+      "accuracy": 0.862523076923077,
+      "balanced_accuracy": 0.7761935938759066,
+      "precision": 0.7591994835377663,
+      "recall": 0.6125,
+      "f1": 0.6780051888152205,
+      "roc_auc": 0.9133158008494494,
+      "average_precision": 0.7993985997011499
+    }
+  ],
+  "train_metrics": {
+    "accuracy": 0.8862833082337032,
+    "balanced_accuracy": 0.8125901365598096,
+    "precision": 0.8248312666771308,
+    "recall": 0.6703661181273122,
+    "f1": 0.7396199859254047,
+    "roc_auc": 0.9476572673363035,
+    "average_precision": 0.866356878857059
+  },
+  "majority_accuracy_gain": 0.09883076923076928,
+  "logistic_roc_auc_difference": 0.009472367714209229,
+  "top_mdi": [
+    "marital-status",
+    "capital-gain",
+    "education-num"
+  ],
+  "top_permutation": [
+    "marital-status",
+    "capital-gain",
+    "education-num"
+  ],
+  "rank_correlation": 0.7098901098901099,
+  "education_joint_drop": 0.051900186933735756,
+  "random_number_unrestricted_mdi": 0.10529334256941301,
+  "random_number_unrestricted_validation_drop": -0.008032726454093008,
+  "wrong_predictions": 2234,
+  "permutation_rows": 2500,
+  "permutation_repeats": 10,
+  "confusion_matrix": [
+    [
+      11664,
+      746
+    ],
+    [
+      1488,
+      2352
+    ]
+  ]
+}
