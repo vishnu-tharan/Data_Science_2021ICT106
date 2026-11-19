@@ -16,6 +16,13 @@ The project compares a majority baseline, Logistic Regression, and three Random 
 
 The selected forest uses a minimum leaf size of 15. Its test accuracy is 86.25%, compared with 76.37% for the majority baseline and 85.06% for Logistic Regression. Forest ROC-AUC is 0.9133 and F1 is 0.6780. Fold scores, final metrics, and evaluation charts are included as evidence.
 
+## Importance comparison
+Built-in importance is grouped across encoded columns for each original input. Permutation importance shuffles each original input 10 times on a fixed sample of 2,500 test rows. Balanced accuracy is the main score, with ROC-AUC also checked. Shuffle standard deviations show variation, not confidence intervals.
+
+Both methods rank marital-status, capital-gain, and education-num highest. Census weight ranks sixth by built-in importance and fourteenth by test permutation importance. Shuffling it slightly improves the test sample score. The comparison table, individual shuffle results, and chart are included.
+
+Education and education-num are also shuffled together. Their joint score drop is close to education-num alone in this fitted forest. These checks describe model behaviour and do not prove cause.
+
 ## Run
 Use Python 3.13. From the project folder:
 
