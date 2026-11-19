@@ -6,10 +6,17 @@
 ## Project question
 How do Random Forest's built-in feature importance and permutation importance differ when predicting adult income, and when can their rankings be misleading?
 
-## Plan
-Start with data checks and cleaning. Compare a majority-class baseline and Logistic Regression with Random Forest. Use cross-validation for model choice and keep a separate test set. Compare built-in and permutation importance, check random inputs, and review at least ten wrong predictions.
+## Data and cleaning
+I chose the public UCI Adult Income dataset because it contains numbers and categories. It comes from the 1994 US Census and contains 48,842 rows before cleaning. The target is income above $50,000. The original training and test files stay separate.
 
-## Environment
+After removing duplicates and overlapping test input profiles, there are 32,537 training rows and 16,250 test rows. The original and cleaned data are included in `data/`. Source credit is in `data/SOURCE.md`, and column meanings are in `docs/DATA_DICTIONARY.md`.
+
+## Model evaluation
+The project compares a majority baseline, Logistic Regression, and three Random Forest settings. Five stratified group folds keep matching input profiles together. Each pipeline learns preparation from its training rows only. Mean validation ROC-AUC selects the forest. Test results do not change its settings.
+
+The selected forest uses a minimum leaf size of 15. Its test accuracy is 86.25%, compared with 76.37% for the majority baseline and 85.06% for Logistic Regression. Forest ROC-AUC is 0.9133 and F1 is 0.6780. Fold scores, final metrics, and evaluation charts are included as evidence.
+
+## Run
 Use Python 3.13. From the project folder:
 
 ```powershell
@@ -18,22 +25,7 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m jupyterlab
 ```
 
-## Data
-I chose the public [UCI Adult Income dataset](https://archive.ics.uci.edu/dataset/2/adult) because it contains both numbers and categories. It has 48,842 rows and 14 input columns before cleaning. The target is annual income above $50,000. The data comes from the 1994 US Census.
+Open `Project_09_2021ICT106.ipynb` and run the cells from top to bottom. The data is local. The notebook saves its outputs in `figures/` and `results/`.
 
-The original training file, test file, and source guide are in `data/raw/`. Source credit is in `data/SOURCE.md`. Column meanings are in `docs/DATA_DICTIONARY.md`.
-
-The original training and test files will stay separate. Only public data is used. This old US dataset should not be treated as current Sri Lankan income data.
-
-## Data cleaning and checks
-The notebook reads the original local files, treats question marks as missing values, trims text, and removes trailing full stops from test labels. Exact duplicate rows are removed. Any test input profile already present in training is removed from the test set. The cleaned sets contain 32,537 training rows and 16,250 test rows.
-
-The notebook checks valid labels, numerical ranges, missing values, and train/test profile overlap. Matching training profiles receive group keys for later cross-validation. No models have been fitted in this committed notebook stage.
-
-## Evidence for this stage
-- `Project_09_2021ICT106.ipynb`: executed loading and cleaning cells.
-- `data/adult_train_clean.csv` and `data/adult_test_clean.csv`: cleaned datasets.
-- `results/data_audit.csv`: original counts and removed rows.
-- `results/source_checksums.json`: SHA-256 hashes of the three original files.
-
-Open the notebook from this project folder and run its cells from top to bottom. The notebook uses local data and a fixed seed of 106. Model comparisons, importance experiments, error analysis, and final reports follow in later commits.
+## Limits
+The data is old and from the US. It does not describe current Sri Lankan income. Scores treat rows equally and do not apply Census weights. Related inputs can share information. Importance depends on the fitted model and chosen score and does not prove cause. Public demographic data can contain historical bias. This project does not establish fair treatment and should not guide real hiring, lending, or pay decisions.
