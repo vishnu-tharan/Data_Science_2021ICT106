@@ -1,0 +1,8 @@
+,rows
+raw_train_rows,32561
+raw_test_rows,16281
+train_exact_duplicates_removed,24
+test_exact_duplicates_removed,5
+overlapping_test_profiles_removed,26
+clean_train_rows,32537
+clean_test_rows,16250

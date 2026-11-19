@@ -9,4 +9,4 @@ Becker, B. and Kohavi, R. (1996). **Adult** [Dataset]. UCI Machine Learning Repo
 - Downloaded: 19 November 2026.
 - Origin: 1994 US Census database.
 
-The original files `adult.data`, `adult.test`, and `adult.names` are included unchanged in `raw/`. Cleaning and source-file checksums will follow in the next phase. No private records are included. Keep the source credit and license with shared data copies.
+Original files `adult.data`, `adult.test`, and `adult.names` are kept in `raw/`. File checksums are included in `results/source_checksums.json`. Cleaned CSV copies are included as evidence. Running the notebook refreshes these files. Changes include trimming text, standardising test labels, treating question marks as missing, removing exact duplicate rows, and removing test input profiles present in training. No private records have been added. Credit and the source license should stay with shared data copies.

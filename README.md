@@ -25,5 +25,15 @@ The original training file, test file, and source guide are in `data/raw/`. Sour
 
 The original training and test files will stay separate. Only public data is used. This old US dataset should not be treated as current Sri Lankan income data.
 
-## Current stage
-Original data and its source information are included. Cleaning and validation checks come next.
+## Data cleaning and checks
+The notebook reads the original local files, treats question marks as missing values, trims text, and removes trailing full stops from test labels. Exact duplicate rows are removed. Any test input profile already present in training is removed from the test set. The cleaned sets contain 32,537 training rows and 16,250 test rows.
+
+The notebook checks valid labels, numerical ranges, missing values, and train/test profile overlap. Matching training profiles receive group keys for later cross-validation. No models have been fitted in this committed notebook stage.
+
+## Evidence for this stage
+- `Project_09_2021ICT106.ipynb`: executed loading and cleaning cells.
+- `data/adult_train_clean.csv` and `data/adult_test_clean.csv`: cleaned datasets.
+- `results/data_audit.csv`: original counts and removed rows.
+- `results/source_checksums.json`: SHA-256 hashes of the three original files.
+
+Open the notebook from this project folder and run its cells from top to bottom. The notebook uses local data and a fixed seed of 106. Model comparisons, importance experiments, error analysis, and final reports follow in later commits.
