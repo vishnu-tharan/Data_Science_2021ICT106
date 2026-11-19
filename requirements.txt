@@ -1,0 +1,12 @@
+# Python 3.13. Package versions used in the checked analysis.
+numpy==2.5.5
+pandas==3.1.0
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+nbformat==5.11.1
+nbclient==0.11.0
+nbconvert==7.17.2
+ipykernel==7.4.0
+IPython==9.18.1
+jupyterlab>=4.4,<5
