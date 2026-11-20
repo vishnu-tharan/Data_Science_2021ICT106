@@ -44,7 +44,6 @@ In the separate experiment, the unrestricted forest gives a random numerical inp
 - `docs/REPORT.md`: detailed explanation of the methods, findings, and errors.
 - `docs/Project_09_Report.pdf`: printable report with tables, charts, and all ten error reviews.
 - `docs/DATA_DICTIONARY.md`: column meanings and handling.
-- `docs/REQUIREMENTS_CHECKLIST.md`: maps the project requirements to the evidence.
 - `.gitignore`: excludes local environments, temporary files, and notebook checkpoints.
 
 ## Run the notebook
@@ -86,6 +85,6 @@ Scores treat each row equally. The Census weight is an input, not a row weight. 
 - [scikit-learn: Correlated feature importance](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html)
 
 ## Final requirement check
-The local project work and evidence are complete. The notebook was rerun from a fresh kernel during the final review. The saved metrics, fold summaries, importance repeats, and ten error cases were independently checked against the evidence. See `results/verification.json` and `docs/REQUIREMENTS_CHECKLIST.md`.
+The local project work and evidence are complete. The notebook was rerun from a fresh kernel during the final review. The saved metrics, fold summaries, importance repeats, and ten error cases were independently checked against the evidence. See `results/verification.json`.
 
 GitHub publication and the viva remain. Upload this folder to your repository, submit the link, and practise explaining the notebook before the viva.
